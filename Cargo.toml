@@ -1,0 +1,19 @@
+[package]
+name = "zipbit11"
+version = "0.1.0"
+edition = "2021"
+description = "Tool to inspect and manipulate bit 11 (UTF-8 flag) in ZIP file entries"
+authors = ["yuk7 <yukx00@gmail.com>"]
+license = "MIT"
+
+[[bin]]
+name = "zipbit11"
+path = "src/main.rs"
+
+[dependencies]
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
